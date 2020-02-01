@@ -16,6 +16,7 @@ public class BitminBehaviour : MonoBehaviour
     public Throwable throwScript;
     public int minThinking;
     public int maxThinking;
+
     private void OnEnable()
     {
         _bitController = BitController.Instance;
@@ -23,6 +24,8 @@ public class BitminBehaviour : MonoBehaviour
         {
             ownNavMeshAgent.enabled = true;
         }
+        ChangeColor();
+
 
     }
     private void OnDisable()
@@ -30,14 +33,20 @@ public class BitminBehaviour : MonoBehaviour
 
     }
 
+    public void ChangeColor() {
+        bitminColor = (BitController.COLORS)Random.Range(0, (int)System.Enum.GetValues(typeof(BitController.COLORS)).Length -2);
+        Debug.Log(bitminColor);
+
+        foreach (MeshRenderer meshRenderer in accentMeshes)
+        {
+            meshRenderer.material.color = BitController.HueColourValue(bitminColor);
+        }
+    }
     void Start()
     {
         throwScript = GetComponent<Throwable>();
         throwScript = this.GetComponent<Throwable>();
-        foreach(MeshRenderer meshRenderer in accentMeshes)
-        {
-            meshRenderer.material.color = BitController.HueColourValue(bitminColor);
-        }
+
         if (ownNavMeshAgent == null){
             ownNavMeshAgent = GetComponent<NavMeshAgent>();
         }

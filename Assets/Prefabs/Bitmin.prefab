@@ -288,7 +288,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownNavMeshAgent: {fileID: 0}
+  accentMeshes:
+  - {fileID: 3590317327407125314}
+  - {fileID: 1449946763507217856}
+  - {fileID: 3295088016970258334}
+  - {fileID: 3940970108892962573}
+  - {fileID: 5850165075898414579}
+  - {fileID: 3853832843395549802}
+  - {fileID: 7512256449921968653}
+  - {fileID: 4991231072537638365}
   targetPosition: {x: 0, y: 0, z: 0}
+  bitminColor: 0
   thinking: 0
   throwScript: {fileID: 0}
   minThinking: 0
