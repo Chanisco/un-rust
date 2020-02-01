@@ -7,6 +7,7 @@ public class DoorScript : MonoBehaviour
 
     private EventController _eventController;
     private Animator _animator;
+
     // Start is called before the first frame update
     void Start()
     {

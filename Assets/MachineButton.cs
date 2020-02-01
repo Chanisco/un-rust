@@ -27,14 +27,14 @@ public class MachineButton : MonoBehaviour
         buttonmeshRenderer = GetComponent<MeshRenderer>();
         buttonmeshRenderer.material.color = BitController.HueColourValue(buttonColor);
     }
-    
+
     public void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Bitmin")
         {
 
             BitminBehaviour bitminScript = other.gameObject.GetComponent<BitminBehaviour>();
-            if(bitminScript.bitminColor == buttonColor)
+            if (bitminScript.bitminColor == buttonColor)
             {
                 _scoreController.AddPointsToScore(_scoreController.PointsForRightCombo);
                 buttonmeshRenderer.material.color = new Color(0, 0, 0);
@@ -52,7 +52,7 @@ public class MachineButton : MonoBehaviour
     {
         gameObject.GetComponent<BoxCollider>().enabled = true;
     }
-
+}
 public enum BUTTONSIZE {
     BIG,
     MEDIUM,
