@@ -27,9 +27,15 @@ public class MachineButton : MonoBehaviour
 
     public void OnCollisionEnter(Collision other)
     {
+        Debug.Log("I AM COLEDING");
         if (other.gameObject.CompareTag("Bitmin"))
         {
+            Debug.Log("HIT");
             BitminBehaviour bitminScript = other.gameObject.GetComponent<BitminBehaviour>();
+        }
+        else
+        {
+            Debug.Log("NO HIT");
         }
     }
 }

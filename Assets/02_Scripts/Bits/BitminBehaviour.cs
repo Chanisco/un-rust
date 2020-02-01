@@ -8,7 +8,7 @@ public class BitminBehaviour : MonoBehaviour
 {
 
     private NavMeshAgent ownNavMeshAgent;
-    private MeshRenderer meshRenderer;
+    public MeshRenderer[] accentMeshes;
     public Vector3 targetPosition;
     private BitController _bitController;
     public BitController.COLORS bitminColor;
@@ -28,8 +28,10 @@ public class BitminBehaviour : MonoBehaviour
     void Start()
     {
         throwScript = this.GetComponent<Throwable>();
-        meshRenderer = this.GetComponent<MeshRenderer>();
-        meshRenderer.material.color = BitController.HueColourValue(bitminColor);
+        foreach(MeshRenderer meshRenderer in accentMeshes)
+        {
+            meshRenderer.material.color = BitController.HueColourValue(bitminColor);
+        }
         if (ownNavMeshAgent == null){
             ownNavMeshAgent = this.GetComponent<NavMeshAgent>();
         }
