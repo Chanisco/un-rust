@@ -18,13 +18,7 @@ public class MachineButton : MonoBehaviour
     {
         buttonMaterial.material.color = BitController.HueColourValue(buttonColor);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void OnCollisionEnter(Collision other)
     {
         Debug.Log("I AM COLEDING");
