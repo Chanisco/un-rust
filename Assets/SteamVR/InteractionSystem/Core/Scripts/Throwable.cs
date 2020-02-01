@@ -190,7 +190,7 @@ namespace Valve.VR.InteractionSystem
 
             rigidbody.velocity = velocity;
             rigidbody.angularVelocity = angularVelocity;
-            playSound(throwingSounds[Random.Range(0, pickupSounds.Length)], 0.5f, 1.5f);
+            playSound(throwingSounds[Random.Range(0, throwingSounds.Length)], 0.5f, 1.5f);
 
         }
 
