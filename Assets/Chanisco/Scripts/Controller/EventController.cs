@@ -55,6 +55,20 @@ public class EventController : Singleton<EventController> {
         OnAddScore(targetAmount);
     }
 
+    public event Action<int> ChangeTime;
+    void OnChangeTime(int targetAmount)
+    {
+        if (ChangeTime != null)
+        {
+            ChangeTime(targetAmount);
+        }
+    }
+    public void ChangeTimeCall(int targetAmount)
+    {
+        OnChangeTime(targetAmount);
+    }
+
+
 
 
 }
