@@ -19,6 +19,7 @@ public class BitminBehaviour : MonoBehaviour
 
     private void OnEnable()
     {
+        gameObject.tag = "Bitmin";
         _bitController = BitController.Instance;
         if (ownNavMeshAgent != null)
         {
@@ -35,7 +36,6 @@ public class BitminBehaviour : MonoBehaviour
 
     public void ChangeColor() {
         bitminColor = (BitController.COLORS)Random.Range(0, (int)System.Enum.GetValues(typeof(BitController.COLORS)).Length -2);
-        Debug.Log(bitminColor);
 
         foreach (MeshRenderer meshRenderer in accentMeshes)
         {
@@ -61,16 +61,20 @@ public class BitminBehaviour : MonoBehaviour
         {
             Holding();
         }
+        if(ownNavMeshAgent.isActiveAndEnabled == true)
+        {
+            if (ownNavMeshAgent.remainingDistance < 0.1f && thinking == false)
+            {
+                StartCoroutine("changeMind");
+                ownNavMeshAgent.isStopped = true;
+            }
+            else
+            {
+                ownNavMeshAgent.SetDestination(targetPosition);
+            }
 
-        if (ownNavMeshAgent.remainingDistance < 0.1f && thinking == false)
-        {
-            StartCoroutine("changeMind");
-            ownNavMeshAgent.isStopped = true;
         }
-        else
-        {
-            ownNavMeshAgent.SetDestination(targetPosition);
-        }
+
         CheckIfOutBound();
     }
 
@@ -81,9 +85,12 @@ public class BitminBehaviour : MonoBehaviour
             thinking = true;
             int r = Random.Range(minThinking, maxThinking);
             yield return new WaitForSeconds(r);
-            ownNavMeshAgent.isStopped = false;
-            targetPosition = _bitController.GiveNewPositionForPlayfield();
-            thinking = false;
+            if (ownNavMeshAgent.isActiveAndEnabled == true)
+            {
+                ownNavMeshAgent.isStopped = false;
+                targetPosition = _bitController.GiveNewPositionForPlayfield();
+                thinking = false;
+            }
         }
 
 

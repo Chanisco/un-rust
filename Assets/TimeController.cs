@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeController : MonoBehaviour
+public class TimeController : Singleton<TimeController>
 {
-    public int currentTimeInSeconds;
+    public int currentTimeInSeconds = 90;
     public EventController _eventController;
 
     private void Start()
@@ -21,7 +21,7 @@ public class TimeController : MonoBehaviour
 
     IEnumerator timeRoutine()
     {
-        while (currentTimeInSeconds != 0)
+        while (currentTimeInSeconds > 0)
         {
             yield return new WaitForSeconds(1);
             currentTimeInSeconds--;
