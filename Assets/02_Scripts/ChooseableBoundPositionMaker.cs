@@ -13,7 +13,7 @@ public class ChooseableBoundPositionMaker : MonoBehaviour
     private void Start()
     {
         int i = 0;
-        while (i < target.Count - 1)
+        while (i < target.Count)
         {
             target[i].FillCridentials();
 

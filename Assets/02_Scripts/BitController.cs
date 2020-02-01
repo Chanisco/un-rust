@@ -14,4 +14,5 @@ public class BitController : Singleton<BitController>
         return _chooseableBoundPositionMaker.GetRandomPositionWithBounds();
     }
 
+
 }
