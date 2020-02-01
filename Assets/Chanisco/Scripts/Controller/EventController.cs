@@ -42,5 +42,19 @@ public class EventController : Singleton<EventController> {
         OnNewBitNeeded();
     }
 
+    public event Action<int> AddScore;
+    void OnAddScore(int targetAmount)
+    {
+        if (AddScore != null)
+        {
+            AddScore(targetAmount);
+        }
+    }
+    public void AddScoreCall(int targetAmount)
+    {
+        OnAddScore(targetAmount);
+    }
+
+
 
 }

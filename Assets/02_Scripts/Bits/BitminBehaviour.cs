@@ -88,6 +88,13 @@ public class BitminBehaviour : MonoBehaviour
         }
     }
 
+    public void RemoveBit()
+    {
+        gameObject.SetActive(false);
+        _bitController.NewBitNeededRequest();
+
+    }
+
     private void Holding()
     {
         ownNavMeshAgent.enabled = false;
