@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7061954348459653535}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.0000000074504, y: 0.000000059605, z: -0.9632}
+  m_LocalPosition: {x: 0.0000000074504, y: 0.000000059605, z: 0}
   m_LocalScale: {x: 0.71215993, y: 0.026207486, z: 0.71215993}
   m_Children: []
   m_Father: {fileID: 2378668907496475986}
@@ -139,6 +139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658d4be5bba3d5148b5b36a65ee32df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonCollider: {fileID: 2430799480213205466}
+  buttonMaterial: {fileID: 0}
+  buttonColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7880901589267973587
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7880901589267973587}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -1.045}
+  m_LocalPosition: {x: 0, y: 0, z: 0.09}
   m_LocalScale: {x: 0.5143, y: 0.08749189, z: 0.5143}
   m_Children: []
   m_Father: {fileID: 2378668907496475986}
