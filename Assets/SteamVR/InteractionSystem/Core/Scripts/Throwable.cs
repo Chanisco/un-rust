@@ -188,8 +188,8 @@ namespace Valve.VR.InteractionSystem
 
             GetReleaseVelocities(hand, out velocity, out angularVelocity);
 
-            rigidbody.velocity = velocity;
-            rigidbody.angularVelocity = angularVelocity;
+            rigidbody.velocity = velocity * 1.5f;
+            rigidbody.angularVelocity = angularVelocity * 1.2f;
             playSound(throwingSounds[Random.Range(0, pickupSounds.Length)], 0.5f, 1.5f, false);
         }
 
