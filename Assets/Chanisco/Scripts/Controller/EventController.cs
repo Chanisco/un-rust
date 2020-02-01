@@ -15,6 +15,20 @@ public class EventController : Singleton<EventController> {
         OnGameOverByFinish();
     }
 
+    public event Action GameStart;
+    void OnGameStart()
+    {
+        if (GameStart != null)
+        {
+            GameStart();
+        }
+    }
+    public void GameStartCall()
+    {
+        OnGameStart();
+    }
+
+
 
 
 }

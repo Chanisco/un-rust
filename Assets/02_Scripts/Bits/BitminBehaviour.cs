@@ -37,7 +37,6 @@ public class BitminBehaviour : MonoBehaviour
         }
         else
         {
-            Debug.Log(ownNavMeshAgent.remainingDistance < 0.1f);
             ownNavMeshAgent.SetDestination(targetPosition);
         }
     }
