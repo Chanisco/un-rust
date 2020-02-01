@@ -6,7 +6,7 @@ TagManager:
   tags:
   - projectile
   - FxTemporaire
-  - bitmin
+  - Bitmin
   layers:
   - Default
   - TransparentFX
