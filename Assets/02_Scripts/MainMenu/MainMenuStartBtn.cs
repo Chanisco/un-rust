@@ -25,6 +25,6 @@ public class MainMenuStartBtn : MonoBehaviour
 
         //TODO Aaron wilt een animatie maken voor de btn
         _eventController.GameStartCall();
-        gameObject.SetActive(false);
+        gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 }
