@@ -21,10 +21,13 @@ public class TimeController : MonoBehaviour
 
     IEnumerator timeRoutine()
     {
-        yield return new WaitForSeconds(1);
-        currentTimeInSeconds--;
-        _eventController.ChangeTimeCall(currentTimeInSeconds);
-
+        while (currentTimeInSeconds != 0)
+        {
+            yield return new WaitForSeconds(1);
+            currentTimeInSeconds--;
+            _eventController.ChangeTimeCall(currentTimeInSeconds);
+        }
+        _eventController.GameEndCall();
     }
 
 

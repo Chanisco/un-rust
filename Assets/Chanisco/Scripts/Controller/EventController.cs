@@ -28,6 +28,19 @@ public class EventController : Singleton<EventController> {
         OnGameStart();
     }
 
+    public event Action GameEnd;
+    void OnGameEnd()
+    {
+        if (GameEnd != null)
+        {
+            GameEnd();
+        }
+    }
+    public void GameEndCall()
+    {
+        OnGameEnd();
+    }
+
 
     public event Action NewBitNeeded;
     void OnNewBitNeeded()
