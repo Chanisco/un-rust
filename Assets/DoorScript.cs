@@ -13,6 +13,7 @@ public class DoorScript : MonoBehaviour
         _animator = this.GetComponent<Animator>();
         _eventController = EventController.Instance;
         _eventController.GameStart += DoorOpen;
+        _eventController.GameEnd += DoorClose;
     }
 
     public void DoorOpen()

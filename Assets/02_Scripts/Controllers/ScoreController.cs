@@ -6,17 +6,23 @@ public class ScoreController : Singleton<ScoreController>
 {
     public int Score = 0;
     private EventController _eventController;
-
+    public int PointsForRightCombo = 200;
+    public int PointsForWrongCombo = 100;
     private void OnEnable()
     {
         _eventController = EventController.Instance;
-        _eventController.AddScore += AddPointsToScore;
+        _eventController.GameStart += init;
 
     }
 
-    private void AddPointsToScore(int t)
+    private void init()
     {
-
+        Score = 0;
+    }
+    public void AddPointsToScore(int t)
+    {
+        Score += t;
+        _eventController.AddScoreCall(t);
     }
 
 

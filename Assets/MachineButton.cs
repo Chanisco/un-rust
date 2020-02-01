@@ -9,8 +9,20 @@ public class MachineButton : MonoBehaviour
     public ParticleSystem correctEffect;
     public BUTTONSIZE buttonSize;
 
+    private EventController _eventController;
+    private ScoreController _scoreController;
+
+
 
     void Start()
+    {
+        _eventController = EventController.Instance;
+        _scoreController = ScoreController.Instance;
+        _eventController.GameStart += PreparePosition;
+        _eventController.GameEnd += ResetButton;
+    }
+
+    void PreparePosition()
     {
         buttonmeshRenderer = GetComponent<MeshRenderer>();
         buttonmeshRenderer.material.color = BitController.HueColourValue(buttonColor);
@@ -18,25 +30,28 @@ public class MachineButton : MonoBehaviour
     
     public void OnCollisionEnter(Collision other)
     {
-        Debug.Log("I colleide");
         if (other.gameObject.tag == "Bitmin")
         {
-            Debug.Log("I is bitmin");
 
             BitminBehaviour bitminScript = other.gameObject.GetComponent<BitminBehaviour>();
             if(bitminScript.bitminColor == buttonColor)
             {
-                Debug.Log("HIT");
+                _scoreController.AddPointsToScore(_scoreController.PointsForRightCombo);
                 buttonmeshRenderer.material.color = new Color(0, 0, 0);
             }
             else
             {
-                Debug.Log("WrongHit");
+                _scoreController.AddPointsToScore(_scoreController.PointsForWrongCombo);
             }
             bitminScript.RemoveBit();
+            gameObject.GetComponent<BoxCollider>().enabled = false;
         }
     }
-}
+
+    private void ResetButton()
+    {
+        gameObject.GetComponent<BoxCollider>().enabled = true;
+    }
 
 public enum BUTTONSIZE {
     BIG,

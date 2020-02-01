@@ -9,6 +9,7 @@ public class MainMenuStartBtn : MonoBehaviour
     private void OnEnable()
     {
         _eventController = EventController.Instance;
+        _eventController.GameEnd += ResetButton;
     }
 
 
@@ -26,5 +27,11 @@ public class MainMenuStartBtn : MonoBehaviour
         //TODO Aaron wilt een animatie maken voor de btn
         _eventController.GameStartCall();
         gameObject.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    private void ResetButton()
+    {
+        gameObject.GetComponent<BoxCollider>().enabled = true;
+
     }
 }

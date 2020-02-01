@@ -85,9 +85,12 @@ public class BitminBehaviour : MonoBehaviour
             thinking = true;
             int r = Random.Range(minThinking, maxThinking);
             yield return new WaitForSeconds(r);
-            ownNavMeshAgent.isStopped = false;
-            targetPosition = _bitController.GiveNewPositionForPlayfield();
-            thinking = false;
+            if (ownNavMeshAgent.isActiveAndEnabled == true)
+            {
+                ownNavMeshAgent.isStopped = false;
+                targetPosition = _bitController.GiveNewPositionForPlayfield();
+                thinking = false;
+            }
         }
 
 
