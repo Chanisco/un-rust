@@ -15,6 +15,10 @@ namespace Valve.VR.InteractionSystem
 	[RequireComponent( typeof( Rigidbody ) )]
 	public class Throwable : MonoBehaviour
 	{
+        public AudioSource audioSource;
+        public AudioClip[] pickupSounds;
+        public AudioClip[] throwingSounds;
+
 		[EnumFlags]
 		[Tooltip( "The flags used to attach this object to the hand." )]
 		public Hand.AttachmentFlags attachmentFlags = Hand.AttachmentFlags.ParentToHand | Hand.AttachmentFlags.DetachFromOtherHand | Hand.AttachmentFlags.TurnOnKinematic;
@@ -67,7 +71,7 @@ namespace Valve.VR.InteractionSystem
 		{
 			velocityEstimator = GetComponent<VelocityEstimator>();
             interactable = GetComponent<Interactable>();
-
+            audioSource = GetComponent<AudioSource>();
 
 
             rigidbody = GetComponent<Rigidbody>();
@@ -154,9 +158,19 @@ namespace Valve.VR.InteractionSystem
 			attachTime = Time.time;
 			attachPosition = transform.position;
 			attachRotation = transform.rotation;
+            playSound(pickupSounds[0],0.5f,1.5f);
 
-		}
 
+        }
+
+        // we should make an audiomanager
+        public void playSound(AudioClip clip, float pitchMin, float pitchMax )
+        {
+            audioSource.clip = clip;
+            audioSource.pitch = Random.Range(pitchMin, pitchMax);
+
+            audioSource.Play();
+        }
 
         //-------------------------------------------------
         protected virtual void OnDetachedFromHand(Hand hand)
