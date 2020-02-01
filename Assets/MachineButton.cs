@@ -20,12 +20,20 @@ public class MachineButton : MonoBehaviour
         _scoreController = ScoreController.Instance;
         _eventController.GameStart += PreparePosition;
         _eventController.GameEnd += ResetButton;
+        PreparePosition();
     }
 
     void PreparePosition()
     {
         buttonmeshRenderer = GetComponent<MeshRenderer>();
+        ChangeColor();
+    }
+
+    public void ChangeColor()
+    {
+        buttonColor = (BitController.COLORS)Random.Range(0, (int)System.Enum.GetValues(typeof(BitController.COLORS)).Length - 2);
         buttonmeshRenderer.material.color = BitController.HueColourValue(buttonColor);
+        
     }
 
     public void OnCollisionEnter(Collision other)
@@ -37,11 +45,13 @@ public class MachineButton : MonoBehaviour
             if (bitminScript.bitminColor == buttonColor)
             {
                 _scoreController.AddPointsToScore(_scoreController.PointsForRightCombo);
-                buttonmeshRenderer.material.color = new Color(0, 0, 0);
+                buttonmeshRenderer.material.color = BitController.HueColourValue(BitController.COLORS.CORRECT);
             }
             else
             {
                 _scoreController.AddPointsToScore(_scoreController.PointsForWrongCombo);
+                buttonmeshRenderer.material.color = BitController.HueColourValue(BitController.COLORS.NOT_CORRECT);
+
             }
             bitminScript.RemoveBit();
             gameObject.GetComponent<BoxCollider>().enabled = false;
