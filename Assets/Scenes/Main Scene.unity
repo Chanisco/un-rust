@@ -243,20 +243,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bitmin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 185455609838830120, guid: 86672d1f19ecb4347a11e2669307ccc7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.019672176
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07316232
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.03474599
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
@@ -317,20 +322,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bitmin (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 185455609838830120, guid: 86672d1f19ecb4347a11e2669307ccc7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7461722
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07316232
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.703754
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
@@ -425,20 +435,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bitmin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 185455609838830120, guid: 86672d1f19ecb4347a11e2669307ccc7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4951722
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07316232
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.129754
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
@@ -989,20 +1004,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bitmin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 185455609838830120, guid: 86672d1f19ecb4347a11e2669307ccc7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.40982783
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07316232
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.12975395
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5937045778842961680, guid: 86672d1f19ecb4347a11e2669307ccc7,
         type: 3}
