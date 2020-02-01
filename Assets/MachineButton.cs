@@ -18,11 +18,15 @@ public class MachineButton : MonoBehaviour
     
     public void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Bitmin"))
+        Debug.Log("I colleide");
+        if (other.gameObject.tag == "Bitmin")
         {
+            Debug.Log("I is bitmin");
+
             BitminBehaviour bitminScript = other.gameObject.GetComponent<BitminBehaviour>();
             if(bitminScript.bitminColor == buttonColor)
             {
+                Debug.Log("HIT");
                 buttonmeshRenderer.material.color = new Color(0, 0, 0);
             }
             else
