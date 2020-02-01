@@ -139,8 +139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658d4be5bba3d5148b5b36a65ee32df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonPart: {fileID: 7880901589267973587}
   buttonCollider: {fileID: 2430799480213205466}
-  buttonMaterial: {fileID: 0}
+  buttonMaterial: {fileID: 867923490446410280}
   buttonColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7880901589267973587
 GameObject:
@@ -155,7 +156,7 @@ GameObject:
   - component: {fileID: 867923490446410280}
   - component: {fileID: 2430799480213205466}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: button part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

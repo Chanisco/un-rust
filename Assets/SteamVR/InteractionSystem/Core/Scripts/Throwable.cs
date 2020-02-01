@@ -164,10 +164,10 @@ namespace Valve.VR.InteractionSystem
         }
 
         // we should make an audiomanager
-        public void playSound(AudioClip clip, float pitchMin, float pitchMax )
+        public void playSound(AudioClip clip, float pitchMin, float pitchMax, bool changePitch = true)
         {
             audioSource.clip = clip;
-            audioSource.pitch = Random.Range(pitchMin, pitchMax);
+            if(changePitch) audioSource.pitch = Random.Range(pitchMin, pitchMax);
 
             audioSource.Play();
         }
@@ -190,7 +190,7 @@ namespace Valve.VR.InteractionSystem
 
             rigidbody.velocity = velocity;
             rigidbody.angularVelocity = angularVelocity;
-            playSound(throwingSounds[Random.Range(0, pickupSounds.Length)], 0.5f, 1.5f);
+            playSound(throwingSounds[Random.Range(0, pickupSounds.Length)], 0.5f, 1.5f, false);
 
         }
 
