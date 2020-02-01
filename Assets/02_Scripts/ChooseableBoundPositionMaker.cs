@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChooseableBoundPositionMaker : MonoBehaviour
 {
     public List<ChooseableBoundHolder> target = new List<ChooseableBoundHolder>();
-    public GameObject t;
+
     private void OnEnable()
     {
         BitController.Instance._chooseableBoundPositionMaker = this;
