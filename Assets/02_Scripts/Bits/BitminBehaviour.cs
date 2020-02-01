@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Valve.VR.InteractionSystem;
 
 public class BitminBehaviour : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class BitminBehaviour : MonoBehaviour
     public Vector3 targetPosition;
     private BitController _bitController;
     public bool thinking = false;
+    public Throwable throwScript;
+    public int minThinking;
+    public int maxThinking;
     private void OnEnable()
     {
         _bitController = BitController.Instance;
@@ -21,6 +25,7 @@ public class BitminBehaviour : MonoBehaviour
 
     void Start()
     {
+        throwScript = this.GetComponent<Throwable>();
         if (ownNavMeshAgent == null){
             ownNavMeshAgent = this.GetComponent<NavMeshAgent>();
         }
@@ -30,6 +35,11 @@ public class BitminBehaviour : MonoBehaviour
     
     void Update()
     {
+        if (throwScript.attached == true)
+        {
+            Holding();
+        }
+
         if (ownNavMeshAgent.remainingDistance < 0.1f && thinking == false)
         {
             StartCoroutine("changeMind");
@@ -47,7 +57,7 @@ public class BitminBehaviour : MonoBehaviour
         if (thinking == false)
         {
             thinking = true;
-            int r = Random.Range(2, 10);
+            int r = Random.Range(minThinking, maxThinking);
             yield return new WaitForSeconds(r);
             ownNavMeshAgent.isStopped = false;
             targetPosition = _bitController.GiveNewPositionForPlayfield();
@@ -55,5 +65,11 @@ public class BitminBehaviour : MonoBehaviour
         }
 
 
+    }
+
+    private void Holding()
+    {
+        ownNavMeshAgent.enabled = false;
+        //his.enabled = false ;
     }
 }

@@ -47,7 +47,7 @@ namespace Valve.VR.InteractionSystem
 
 
 		protected VelocityEstimator velocityEstimator;
-        protected bool attached = false;
+        public bool attached = false;
         protected float attachTime;
         protected Vector3 attachPosition;
         protected Quaternion attachRotation;
@@ -141,7 +141,6 @@ namespace Valve.VR.InteractionSystem
         protected virtual void OnAttachedToHand( Hand hand )
 		{
             //Debug.Log("<b>[SteamVR Interaction]</b> Pickup: " + hand.GetGrabStarting().ToString());
-
             hadInterpolation = this.rigidbody.interpolation;
 
             attached = true;
@@ -158,7 +157,8 @@ namespace Valve.VR.InteractionSystem
 			attachTime = Time.time;
 			attachPosition = transform.position;
 			attachRotation = transform.rotation;
-            playSound(pickupSounds[0],0.5f,1.5f);
+            playSound(pickupSounds[Random.Range(0, pickupSounds.Length)],0.5f,1.5f);
+
 
 
         }
@@ -190,6 +190,8 @@ namespace Valve.VR.InteractionSystem
 
             rigidbody.velocity = velocity;
             rigidbody.angularVelocity = angularVelocity;
+            playSound(throwingSounds[Random.Range(0, pickupSounds.Length)], 0.5f, 1.5f);
+
         }
 
 
