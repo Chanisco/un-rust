@@ -13,6 +13,13 @@ public class BitController : Singleton<BitController>
     {
         return _chooseableBoundPositionMaker.GetRandomPositionWithBounds();
     }
+    
 
+}
 
+public enum BIT_COLORS
+{
+    RED,
+    BLUE,
+    YELLOW
 }

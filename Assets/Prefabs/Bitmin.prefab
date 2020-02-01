@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1754353108}
   - component: {fileID: 1808084550409821334}
   - component: {fileID: 1957827615}
-  - component: {fileID: 2030269317}
   m_Layer: 0
   m_Name: Bitmin
   m_TagString: bitmin
@@ -288,33 +287,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7691962a0f7e1a940954bb6b81b49213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownNavMeshAgent: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   thinking: 0
   throwScript: {fileID: 0}
   minThinking: 0
   maxThinking: 4
---- !u!195 &2030269317
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185455609838830120}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.05
-  m_Speed: 0.38
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 0.1
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &2143978228845637109
 GameObject:
   m_ObjectHideFlags: 0
