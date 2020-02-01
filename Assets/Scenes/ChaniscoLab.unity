@@ -1518,6 +1518,75 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &855904917081936803
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5198374042850044312, guid: 9baa91727a1c1f0488798a266ceaada8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198374042850044312, guid: 9baa91727a1c1f0488798a266ceaada8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198374042850044312, guid: 9baa91727a1c1f0488798a266ceaada8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.0748
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198374042850044312, guid: 9baa91727a1c1f0488798a266ceaada8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198374042850044312, guid: 9baa91727a1c1f0488798a266ceaada8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198374042850044312, guid: 9baa91727a1c1f0488798a266ceaada8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198374042850044312, guid: 9baa91727a1c1f0488798a266ceaada8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198374042850044312, guid: 9baa91727a1c1f0488798a266ceaada8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198374042850044312, guid: 9baa91727a1c1f0488798a266ceaada8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198374042850044312, guid: 9baa91727a1c1f0488798a266ceaada8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198374042850044312, guid: 9baa91727a1c1f0488798a266ceaada8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697169911157804886, guid: 9baa91727a1c1f0488798a266ceaada8,
+        type: 3}
+      propertyPath: m_Name
+      value: Material-Fire
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9baa91727a1c1f0488798a266ceaada8, type: 3}
 --- !u!33 &1168132744796464500
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2052,7 +2121,7 @@ PrefabInstance:
     - target: {fileID: 1278670190513081649, guid: 012c688c8563ae6459381e6802fcd311,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1278670190513081649, guid: 012c688c8563ae6459381e6802fcd311,
         type: 3}
@@ -2069,11 +2138,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2930855820865350959, guid: 012c688c8563ae6459381e6802fcd311,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4898527341681035898, guid: 012c688c8563ae6459381e6802fcd311,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4408e8645ee827345aa56eee531f96e5, type: 2}
+    - target: {fileID: 7077420443173311458, guid: 012c688c8563ae6459381e6802fcd311,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 012c688c8563ae6459381e6802fcd311, type: 3}
 --- !u!23 &3045073502617409754
