@@ -29,6 +29,18 @@ public class EventController : Singleton<EventController> {
     }
 
 
+    public event Action NewBitNeeded;
+    void OnNewBitNeeded()
+    {
+        if (NewBitNeeded != null)
+        {
+            NewBitNeeded();
+        }
+    }
+    public void NewBitNeededCall()
+    {
+        OnNewBitNeeded();
+    }
 
 
 }

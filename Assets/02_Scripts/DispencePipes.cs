@@ -6,10 +6,14 @@ public class DispencePipes : MonoBehaviour
 {
     public List<Transform> PipeExits = new List<Transform>();
     private BitController _bitController;
+    private EventController _eventController;
 
     private void OnEnable()
     {
         _bitController = BitController.Instance;
+        _eventController = EventController.Instance;
+        _eventController.NewBitNeeded += InstansiateBitObject;
+
     }
 
     private void Start()
