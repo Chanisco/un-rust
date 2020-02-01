@@ -4,32 +4,39 @@ using UnityEngine;
 
 public class MachineButton : MonoBehaviour
 {
-    public GameObject buttonPart;
-    public Collider buttonCollider;
-    public MeshRenderer buttonMaterial;
+    public MeshRenderer buttonmeshRenderer;
     public BitController.COLORS buttonColor;
     public ParticleSystem correctEffect;
-    public enum ButtonSize{big, medium, small, tiny };
-    public ButtonSize buttonSize;
+    public BUTTONSIZE buttonSize;
 
 
-    // Start is called before the first frame update
     void Start()
     {
-        buttonMaterial.material.color = BitController.HueColourValue(buttonColor);
+        buttonmeshRenderer = GetComponent<MeshRenderer>();
+        buttonmeshRenderer.material.color = BitController.HueColourValue(buttonColor);
     }
     
     public void OnCollisionEnter(Collision other)
     {
-        Debug.Log("I AM COLEDING");
         if (other.gameObject.CompareTag("Bitmin"))
         {
-            Debug.Log("HIT");
             BitminBehaviour bitminScript = other.gameObject.GetComponent<BitminBehaviour>();
-        }
-        else
-        {
-            Debug.Log("NO HIT");
+            if(bitminScript.bitminColor == buttonColor)
+            {
+                buttonmeshRenderer.material.color = new Color(0, 0, 0);
+            }
+            else
+            {
+                Debug.Log("WrongHit");
+            }
+            bitminScript.RemoveBit();
         }
     }
 }
+
+public enum BUTTONSIZE {
+    BIG,
+    MEDIUM,
+    SMALL,
+    TINY
+};
