@@ -18,7 +18,7 @@ public class LevelHead : MonoBehaviour
 
     private void OnDisable()
     {
-        _eventController = EventController.Instance;
+        _eventController.AddScore -= CheckMachineBtns;
 
     }
 
