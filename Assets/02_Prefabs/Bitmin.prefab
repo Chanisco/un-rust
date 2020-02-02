@@ -320,9 +320,9 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.1
-      inSlope: 0
-      outSlope: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -553,16 +553,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: char_3
       objectReference: {fileID: 0}
-    - target: {fileID: 5102506038563556599, guid: 188c714b3b1a3ea4fab08f280e831e19,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6339873203712938236, guid: 188c714b3b1a3ea4fab08f280e831e19,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 71d9bd09c9d64e542a7f70c69199648a, type: 2}
     - target: {fileID: 7754810699829593996, guid: 188c714b3b1a3ea4fab08f280e831e19,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -747,11 +737,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: char_2
       objectReference: {fileID: 0}
-    - target: {fileID: 4328362094168996032, guid: 879fb3ac47ea60c438bd6f2682400ca8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 879fb3ac47ea60c438bd6f2682400ca8, type: 3}
 --- !u!23 &2000523406552603940 stripped
@@ -826,11 +811,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: char_1
       objectReference: {fileID: 0}
-    - target: {fileID: 6702150614051677766, guid: 85c68348240fbbd4c8005ad1bad25145,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6781253429599987905, guid: 85c68348240fbbd4c8005ad1bad25145,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -886,11 +866,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8179643081371444077, guid: 85c68348240fbbd4c8005ad1bad25145,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ddfac7b1c5a1f274489ad1cdbbb317cd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85c68348240fbbd4c8005ad1bad25145, type: 3}
 --- !u!1 &1592966311595362024 stripped
