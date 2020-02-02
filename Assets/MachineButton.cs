@@ -8,6 +8,7 @@ public class MachineButton : MonoBehaviour
     public BitController.COLORS buttonColor;
     public ParticleSystem correctEffect;
     public BUTTONSIZE buttonSize;
+    public bool hit;
 
     private EventController _eventController;
     private ScoreController _scoreController;
@@ -40,7 +41,7 @@ public class MachineButton : MonoBehaviour
     {
         if (other.gameObject.tag == "Bitmin")
         {
-
+            hit = true;
             BitminBehaviour bitminScript = other.gameObject.GetComponent<BitminBehaviour>();
             if (bitminScript.bitminColor == buttonColor)
             {
