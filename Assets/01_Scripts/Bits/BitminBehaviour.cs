@@ -16,6 +16,7 @@ public class BitminBehaviour : MonoBehaviour
     public Throwable throwScript;
     public int minThinking;
     public int maxThinking;
+    public GameObject[] model;
 
     private void OnEnable()
     {
