@@ -25,6 +25,7 @@ public class BitminBehaviour : MonoBehaviour
     private int currentModel;
     public Rigidbody rigidbody;
 
+
     public void startWalking()
     {
       /*  rigidbody.isKinematic = false;

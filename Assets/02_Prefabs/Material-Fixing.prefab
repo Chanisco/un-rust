@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8924445592051467694}
   - component: {fileID: 2752885739912106162}
   - component: {fileID: 1054130628712368247}
+  - component: {fileID: 4501568678971651942}
   m_Layer: 0
   m_Name: Material-Fixing
   m_TagString: Untagged
@@ -4814,6 +4815,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &4501568678971651942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151588600850588083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7736dadcbe5c963438b04e08d8539be7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4631624181682957213
 GameObject:
   m_ObjectHideFlags: 0
