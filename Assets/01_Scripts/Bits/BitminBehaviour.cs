@@ -23,9 +23,19 @@ public class BitminBehaviour : MonoBehaviour
     public TrailRenderer trail;
     private AudioController _audioController;
     private int currentModel;
+    public Rigidbody rigidbody;
+
+    public void startWalking()
+    {
+      /*  rigidbody.isKinematic = false;
+        rigidbody.detectCollisions = true;
+        rigidbody.freezeRotation = false;
+        this.GetComponent<NavMeshAgent>().enabled = true;*/
+    }
 
     private void OnEnable()
     {
+        rigidbody = this.GetComponent<Rigidbody>();
         currentModel = Random.Range(0, model.Length);
         foreach (GameObject model in model)
         {

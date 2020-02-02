@@ -263,6 +263,7 @@ MonoBehaviour:
   thinking: 0
   isHolding: 0
   hasHolded: 0
+  animator: {fileID: 0}
   throwScript: {fileID: 0}
   minThinking: 0
   maxThinking: 4
@@ -353,6 +354,18 @@ MonoBehaviour:
   interactable: {fileID: 0}
   gripOffset: {fileID: 4670980087644067209}
   pinchOffset: {fileID: 8834998232411710482}
+--- !u!114 &4134293438294360791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592966311595362024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c4da81cec37f24f94066b7067f12c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5370889720784373202
 GameObject:
   m_ObjectHideFlags: 0

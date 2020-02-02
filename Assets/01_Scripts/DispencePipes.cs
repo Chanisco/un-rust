@@ -34,27 +34,21 @@ public class DispencePipes : MonoBehaviour
             {
                 t = _bitController.Bitmins[i].gameObject;
                 int r = Random.Range(0, PipeExits.Count);
-                t.GetComponent<Rigidbody>().isKinematic = true;
+               /* t.GetComponent<Rigidbody>().isKinematic = true;
                 t.GetComponent<Rigidbody>().detectCollisions = false;
-                t.GetComponent<Rigidbody>().freezeRotation = true;
+                t.GetComponent<Rigidbody>().freezeRotation = true;*/
 
                 t.transform.position = PipeExits[r].position;
                 t.transform.rotation = PipeExits[r].rotation;
                 t.gameObject.SetActive(true);
 
-                t.gameObject.GetComponent<BitminBehaviour>().animator.SetTrigger("respawn");
+//t.gameObject.GetComponent<BitminBehaviour>().animator.SetTrigger("respawn");
                 t.GetComponent<NavMeshAgent>().enabled = true;
             }
         }
     }
 
-    public void startWalking(GameObject t)
-    {
-        t.GetComponent<Rigidbody>().isKinematic = false;
-        t.GetComponent<Rigidbody>().detectCollisions = true;
-        t.GetComponent<Rigidbody>().freezeRotation = false;
-        t.GetComponent<NavMeshAgent>().enabled = true;
-    }
+   
 
 
 }
