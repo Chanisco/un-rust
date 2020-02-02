@@ -2,19 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class GameController : Singleton<GameController>
 {
-    public List<GameObject> Levels = new List<GameObject>();
+    private EventController _eventController;
+    public LevelHeadHolder lvlheadHolder;
     public int currentLevel = 1;
 
-    public void levelSystem()
+    private void Start()
     {
+        _eventController = EventController.Instance;
+    }
+
+    public void StartGame()
+    {
+        _eventController.GameStartCall();
 
     }
 
-    private void changeLevel()
+    public void NextLevel()
     {
-
+        _eventController.GameOverByFinishCall();
+        currentLevel++;
+        lvlheadHolder.RequestLevelChange(currentLevel - 1);
     }
+
+
 
 }

@@ -6,14 +6,40 @@ public class LevelHead : MonoBehaviour
 {
     public List<MachineButton> MachineBtns = new List<MachineButton>();
 
-    private void CheckMachineBtns()
+    private EventController _eventController;
+    private GameController _gameController;
+
+    private void OnEnable()
     {
-        for (int i = 0; i < MachineBtns.Count; i++)
+        _eventController = EventController.Instance;
+        _gameController = GameController.Instance;
+        _eventController.AddScore += CheckMachineBtns;
+    }
+
+    private void OnDisable()
+    {
+        _eventController = EventController.Instance;
+
+    }
+
+    private void CheckMachineBtns(int score)
+    {
+        int i = 0;
+        bool gameFinished = true;
+        while (i < MachineBtns.Count)
         {
-            if(MachineBtns[i].hit == true)
+            if (MachineBtns[i].hit == false)
             {
+                gameFinished = false;
                 break;
             }
+            i++;
+        }
+
+        if (gameFinished == true)
+        {
+            _gameController.NextLevel();
+
         }
     }
 

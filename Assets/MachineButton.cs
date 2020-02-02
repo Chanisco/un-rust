@@ -21,6 +21,7 @@ public class MachineButton : MonoBehaviour
         _scoreController = ScoreController.Instance;
         _eventController.GameStart += PreparePosition;
         _eventController.GameEnd += ResetButton;
+        _eventController.GameOverByFinish += ResetButton;
         PreparePosition();
     }
 
@@ -62,6 +63,7 @@ public class MachineButton : MonoBehaviour
     private void ResetButton()
     {
         gameObject.GetComponent<BoxCollider>().enabled = true;
+        hit = false;
     }
 }
 public enum BUTTONSIZE {

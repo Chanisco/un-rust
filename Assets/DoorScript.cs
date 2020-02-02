@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-
+    private int PauseBetweenLevel = 2;
     private EventController _eventController;
+    private GameController _gameController;
     private Animator _animator;
 
     // Start is called before the first frame update
@@ -15,6 +16,11 @@ public class DoorScript : MonoBehaviour
         _eventController = EventController.Instance;
         _eventController.GameStart += DoorOpen;
         _eventController.GameEnd += DoorClose;
+        _eventController.GameOverByFinish += DoorCloseForNextLevel;
+
+
+        _gameController = GameController.Instance;
+
     }
 
     public void DoorOpen()
@@ -27,5 +33,10 @@ public class DoorScript : MonoBehaviour
         _animator.SetTrigger("Activate");
     }
 
+    public void DoorCloseForNextLevel()
+    {
+        DoorClose();
+
+    }
 
 }
