@@ -29,7 +29,7 @@ public class BitController : Singleton<BitController>
          { COLORS.ORANGE,   new Color32( 255 , 173 , 77, 1 ) },
          { COLORS.YELLOW,   new Color32( 254 , 255 , 142, 1 ) },
          { COLORS.BLUE,     new Color32( 77 , 158 , 255, 1 ) },
-         { COLORS.PURPLE,   new Color32( 173 , 94 , 255, 1 ) },
+         { COLORS.PURPLE,   new Color32( 173 , 112 , 255, 1 ) },
          { COLORS.MAGNETA,  new Color32( 248 , 112 , 248, 1 ) },
          { COLORS.NOT_CORRECT,  new Color32( 255 , 0 , 0, 1 ) },
          { COLORS.CORRECT,      new Color32( 77 , 255 , 50, 1 ) },

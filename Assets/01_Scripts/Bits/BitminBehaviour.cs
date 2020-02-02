@@ -15,7 +15,7 @@ public class BitminBehaviour : MonoBehaviour
     public bool thinking = false;
     public bool isHolding = false;
     public bool hasHolded = false;
-    private Animator animator;
+    public Animator animator;
     public ModalThrowable throwScript;
     public int minThinking;
     public int maxThinking;
