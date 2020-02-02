@@ -13,15 +13,27 @@ public class BitminBehaviour : MonoBehaviour
     private BitController _bitController;
     public BitController.COLORS bitminColor;
     public bool thinking = false;
-    public Throwable throwScript;
+    public bool isHolding = false;
+    public bool hasHolded = false;
+    private Animator animator;
+    public ModalThrowable throwScript;
     public int minThinking;
     public int maxThinking;
     public GameObject[] model;
     public TrailRenderer trail;
     private AudioController _audioController;
+    private int currentModel;
 
     private void OnEnable()
     {
+        currentModel = Random.Range(0, model.Length);
+        foreach (GameObject model in model)
+        {
+            model.SetActive(false);
+        }
+
+        model[currentModel].SetActive(true);
+        animator = model[currentModel].GetComponent<Animator>();
         gameObject.tag = "Bitmin";
         _bitController = BitController.Instance;
         _audioController = AudioController.Instance;
@@ -45,8 +57,7 @@ public class BitminBehaviour : MonoBehaviour
     }
     void Start()
     {
-        throwScript = GetComponent<Throwable>();
-        throwScript = this.GetComponent<Throwable>();
+        throwScript = this.GetComponent<ModalThrowable>();
 
         if (ownNavMeshAgent == null){
             ownNavMeshAgent = GetComponent<NavMeshAgent>();
@@ -60,9 +71,20 @@ public class BitminBehaviour : MonoBehaviour
 
         if (throwScript.attached == true)
         {
-            Holding();
+            if (isHolding == false)
+            {
+                Holding();
+            }
         }
-        if(ownNavMeshAgent.isActiveAndEnabled == true)
+        if (throwScript.attached == false && hasHolded == true)
+        {
+            isHolding = false;
+            hasHolded = false;
+            animator.SetBool("isGrabbed", false);
+        }
+
+
+        if (ownNavMeshAgent.isActiveAndEnabled == true)
         {
             if (ownNavMeshAgent.remainingDistance < 0.1f && thinking == false)
             {
@@ -114,9 +136,11 @@ public class BitminBehaviour : MonoBehaviour
 
     private void Holding()
     {
+        isHolding = true;
+        hasHolded = true;
         ownNavMeshAgent.enabled = false;
         _audioController.BitSound();
         trail.gameObject.SetActive(true);
-        //his.enabled = false ;
+        animator.SetBool("isGrabbed",true);
     }
 }

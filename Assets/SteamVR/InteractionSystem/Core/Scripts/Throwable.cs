@@ -142,6 +142,7 @@ namespace Valve.VR.InteractionSystem
         protected virtual void OnAttachedToHand( Hand hand )
 		{
             //Debug.Log("<b>[SteamVR Interaction]</b> Pickup: " + hand.GetGrabStarting().ToString());
+            transform.position = rigidbody.transform.position;
             hadInterpolation = this.rigidbody.interpolation;
 
             attached = true;
@@ -155,7 +156,7 @@ namespace Valve.VR.InteractionSystem
             if (velocityEstimator != null)
 		        velocityEstimator.BeginEstimatingVelocity();
 
-			attachTime = Time.time;
+            attachTime = Time.time;
 			attachPosition = transform.position;
 			attachRotation = transform.rotation;
 
