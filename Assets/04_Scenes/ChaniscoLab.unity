@@ -3723,6 +3723,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelHeads:
   - {fileID: 2019800195}
+  - {fileID: 292531037}
+  - {fileID: 1840024224}
+  - {fileID: 1613628615}
   - {fileID: 441413353}
 --- !u!1 &1613628613
 GameObject:
@@ -4692,6 +4695,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3353978514214478431, guid: 0e2ba2cb2957eea4fae6a9abe381f6d5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 31f9be4e92e7a7c49a5257b9cec77f6a, type: 2}
     - target: {fileID: 3658073104604738841, guid: 0e2ba2cb2957eea4fae6a9abe381f6d5,
         type: 3}
       propertyPath: m_Name
@@ -4712,6 +4720,11 @@ PrefabInstance:
       propertyPath: startCanvas
       value: 
       objectReference: {fileID: 448610781}
+    - target: {fileID: 8587789028199084418, guid: 0e2ba2cb2957eea4fae6a9abe381f6d5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2ba2cb2957eea4fae6a9abe381f6d5, type: 3}
 --- !u!1001 &6694231748113806209
