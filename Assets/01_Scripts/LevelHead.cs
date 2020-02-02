@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelHead : MonoBehaviour
 {
-    public List<MachineButton> MachineBtns = new List<MachineButton>();
+    public List<MachineHead> MachineHeads = new List<MachineHead>();
 
     private EventController _eventController;
     private GameController _gameController;
@@ -26,9 +26,9 @@ public class LevelHead : MonoBehaviour
     {
         int i = 0;
         bool gameFinished = true;
-        while (i < MachineBtns.Count)
+        while (i < MachineHeads.Count)
         {
-            if (MachineBtns[i].hit == false)
+            if (MachineHeads[i]._fixed == false)
             {
                 gameFinished = false;
                 break;

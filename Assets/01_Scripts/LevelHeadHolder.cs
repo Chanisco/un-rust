@@ -25,6 +25,7 @@ public class LevelHeadHolder : MonoBehaviour
         yield return new WaitForSeconds(3);
         changeLevel(currentlvl);
     }
+
     private void changeLevel(int targetLevel)
     {
         for (int i = 0; i < levelHeads.Count; i++)
