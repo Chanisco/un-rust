@@ -25,12 +25,12 @@ public class DoorScript : MonoBehaviour
 
     public void DoorOpen()
     {
-        _animator.SetTrigger("Activate");
+        _animator.SetBool("Open",true);
     }
 
     public void DoorClose()
     {
-        _animator.SetTrigger("Activate");
+        _animator.SetBool("Open",false);
     }
 
     public void DoorCloseForNextLevel()

@@ -12,6 +12,7 @@ public class MachineButton : MonoBehaviour
 
     private EventController _eventController;
     private ScoreController _scoreController;
+    private AudioController _audioController;
 
 
 
@@ -19,6 +20,7 @@ public class MachineButton : MonoBehaviour
     {
         _eventController = EventController.Instance;
         _scoreController = ScoreController.Instance;
+        _audioController = AudioController.Instance;
         _eventController.GameStart += PreparePosition;
         _eventController.GameEnd += ResetButton;
         _eventController.GameOverByFinish += ResetButton;
@@ -48,12 +50,13 @@ public class MachineButton : MonoBehaviour
             {
                 _scoreController.AddPointsToScore(_scoreController.PointsForRightCombo);
                 buttonmeshRenderer.material.color = BitController.HueColourValue(BitController.COLORS.CORRECT);
+                _audioController.PlaySFXOnBtnPress(true);
             }
             else
             {
                 _scoreController.AddPointsToScore(_scoreController.PointsForWrongCombo);
                 buttonmeshRenderer.material.color = BitController.HueColourValue(BitController.COLORS.NOT_CORRECT);
-
+                _audioController.PlaySFXOnBtnPress(false);
             }
             bitminScript.RemoveBit();
             gameObject.GetComponent<BoxCollider>().enabled = false;

@@ -17,6 +17,7 @@ public class BitminBehaviour : MonoBehaviour
     public int minThinking;
     public int maxThinking;
     public GameObject[] model;
+    public TrailRenderer trail;
 
     private void OnEnable()
     {
@@ -27,17 +28,14 @@ public class BitminBehaviour : MonoBehaviour
             ownNavMeshAgent.enabled = true;
         }
         ChangeColor();
+        trail.gameObject.SetActive(false);
 
-
-    }
-    private void OnDisable()
-    {
 
     }
 
     public void ChangeColor() {
         bitminColor = (BitController.COLORS)Random.Range(0, (int)System.Enum.GetValues(typeof(BitController.COLORS)).Length -2);
-
+        trail.startColor = BitController.HueColourValue(bitminColor);
         foreach (MeshRenderer meshRenderer in accentMeshes)
         {
             meshRenderer.material.color = BitController.HueColourValue(bitminColor);
@@ -115,6 +113,8 @@ public class BitminBehaviour : MonoBehaviour
     private void Holding()
     {
         ownNavMeshAgent.enabled = false;
+
+        trail.gameObject.SetActive(true);
         //his.enabled = false ;
     }
 }
