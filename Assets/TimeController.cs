@@ -5,11 +5,13 @@ using UnityEngine;
 public class TimeController : Singleton<TimeController>
 {
     public int currentTimeInSeconds = 90;
-    public EventController _eventController;
+    private EventController _eventController;
+    private GameController _gameController;
 
     private void Start()
     {
         _eventController = EventController.Instance;
+        _gameController = GameController.Instance;
         _eventController.GameStart += StartTime;
     }
 
@@ -27,7 +29,7 @@ public class TimeController : Singleton<TimeController>
             currentTimeInSeconds--;
             _eventController.ChangeTimeCall(currentTimeInSeconds);
         }
-        _eventController.GameEndCall();
+        _gameController.OnDead();
     }
 
 

@@ -11,6 +11,7 @@ public class GameController : Singleton<GameController>
     private void Start()
     {
         _eventController = EventController.Instance;
+
     }
 
     public void StartGame()
@@ -24,6 +25,14 @@ public class GameController : Singleton<GameController>
         _eventController.GameOverByFinishCall();
         currentLevel++;
         lvlheadHolder.RequestLevelChange(currentLevel - 1);
+    }
+
+    public void OnDead()
+    {
+        _eventController.GameEndCall();
+        currentLevel = 1;
+        lvlheadHolder.RequestLevelChange(currentLevel - 1);
+
     }
 
 
