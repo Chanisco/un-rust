@@ -189,8 +189,8 @@ namespace Valve.VR.InteractionSystem
 
             GetReleaseVelocities(hand, out velocity, out angularVelocity);
 
-            rigidbody.velocity = velocity * 1.5f;
-            rigidbody.angularVelocity = angularVelocity * 1.2f;
+            rigidbody.velocity = velocity * 2.8f;
+            rigidbody.angularVelocity = angularVelocity * 2.3f;
         }
 
 
