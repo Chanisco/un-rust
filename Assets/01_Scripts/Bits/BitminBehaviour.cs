@@ -23,6 +23,7 @@ public class BitminBehaviour : MonoBehaviour
     public TrailRenderer trail;
     private AudioController _audioController;
     private int currentModel;
+    public GameObject removedParticle;
 
     private void OnEnable()
     {
@@ -130,6 +131,7 @@ public class BitminBehaviour : MonoBehaviour
     public void RemoveBit()
     {
         gameObject.SetActive(false);
+        GameObject t = Instantiate(removedParticle, transform.position, Quaternion.identity) as GameObject;
         _bitController.NewBitNeededRequest();
 
     }
