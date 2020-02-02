@@ -15,6 +15,7 @@ namespace Valve.VR.InteractionSystem
 	[RequireComponent( typeof( Rigidbody ) )]
 	public class Throwable : MonoBehaviour
 	{
+        
         public AudioSource audioSource;
         public AudioClip[] pickupSounds;
         public AudioClip[] throwingSounds;
@@ -157,7 +158,6 @@ namespace Valve.VR.InteractionSystem
 			attachTime = Time.time;
 			attachPosition = transform.position;
 			attachRotation = transform.rotation;
-            playSound(pickupSounds[Random.Range(0, pickupSounds.Length)],0.5f,1.5f);
 
 
 
@@ -190,7 +190,6 @@ namespace Valve.VR.InteractionSystem
 
             rigidbody.velocity = velocity * 1.5f;
             rigidbody.angularVelocity = angularVelocity * 1.2f;
-            playSound(throwingSounds[Random.Range(0, pickupSounds.Length)], 0.5f, 1.5f, false);
         }
 
 

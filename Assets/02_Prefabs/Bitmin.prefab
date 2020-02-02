@@ -118,9 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  pickupSounds:
-  - {fileID: 8300000, guid: 90c554e41d372dd4eb81d5496c92116b, type: 3}
-  - {fileID: 8300000, guid: b728c09c71eb34547ac8fbaaad46fe8d, type: 3}
+  pickupSounds: []
   throwingSounds:
   - {fileID: 8300000, guid: d0dc532e566a99a4fa6f1492dbd98288, type: 3}
   attachmentFlags: 44

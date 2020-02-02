@@ -10,7 +10,9 @@ public class AudioController : Singleton<AudioController>
     private AudioSource _audioSource;
     public AudioClip goodBtnFeedback;
     public AudioClip badBtnFeedback;
+    public AudioClip ThrowSound;
     public List<AudioClip> ClickSoundForBtnList = new List<AudioClip>();
+    public List<AudioClip> BitSoundEffect = new List<AudioClip>();
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -48,6 +50,11 @@ public class AudioController : Singleton<AudioController>
     public void ClickSoundForBtn()
     {
         AudioClip t = ClickSoundForBtnList[Random.Range(0, ClickSoundForBtnList.Count)];
+        _audioSource.PlayOneShot(t);
+    }
+    public void BitSound()
+    {
+        AudioClip t = BitSoundEffect[Random.Range(0, BitSoundEffect.Count)];
         _audioSource.PlayOneShot(t);
     }
 }

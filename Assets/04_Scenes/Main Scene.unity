@@ -2308,8 +2308,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMusic: {fileID: 8300000, guid: 2478dfb7e03c7024a82f51f08b69ced5, type: 3}
-  goodBtnFeedback: {fileID: 0}
-  badBtnFeedback: {fileID: 0}
+  goodBtnFeedback: {fileID: 8300000, guid: 5fa23a661ef656b44af246894aae51c2, type: 3}
+  badBtnFeedback: {fileID: 8300000, guid: 5b9a600ee9f5f9f46ba2c140b021d7f7, type: 3}
+  ThrowSound: {fileID: 8300000, guid: 4c1de0982849f2b49b7b2b4d6957835d, type: 3}
+  ClickSoundForBtnList: []
+  BitSoundEffect:
+  - {fileID: 8300000, guid: b050d0019872ab14ba6bf1f2982e52f5, type: 3}
+  - {fileID: 8300000, guid: 43817c962c7d5074da78a0ee3b8c9012, type: 3}
+  - {fileID: 8300000, guid: feedce5126d804742b80c304367d8931, type: 3}
 --- !u!1001 &1382802996
 PrefabInstance:
   m_ObjectHideFlags: 0

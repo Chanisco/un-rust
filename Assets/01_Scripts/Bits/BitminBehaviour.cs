@@ -18,11 +18,13 @@ public class BitminBehaviour : MonoBehaviour
     public int maxThinking;
     public GameObject[] model;
     public TrailRenderer trail;
+    private AudioController _audioController;
 
     private void OnEnable()
     {
         gameObject.tag = "Bitmin";
         _bitController = BitController.Instance;
+        _audioController = AudioController.Instance;
         if (ownNavMeshAgent != null)
         {
             ownNavMeshAgent.enabled = true;
@@ -113,7 +115,7 @@ public class BitminBehaviour : MonoBehaviour
     private void Holding()
     {
         ownNavMeshAgent.enabled = false;
-
+        _audioController.BitSound();
         trail.gameObject.SetActive(true);
         //his.enabled = false ;
     }
